@@ -1,5 +1,5 @@
 import React from "react";
-import "./testimonials.css";
+import "./testimonial.css";
 import AVTR1 from "../../assets/Avatar1.jpeg";
 import AVTR2 from "../../assets/Avatar2.jpeg";
 import AVTR3 from "../../assets/Avatar3.jpeg";
@@ -41,9 +41,9 @@ const data = [
   },
 ];
 
-const Testimonials = () => {
+const Testimonial = () => {
   return (
-    <section id="testimonials">
+    <section id="testimonial">
       <h5>Review from clients</h5>
       <h2>Testimonials</h2>
 
@@ -70,4 +70,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonial;
