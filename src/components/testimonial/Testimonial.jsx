@@ -37,7 +37,7 @@ const data = [
     avatar: AVTR4,
     name: "Britney",
     review:
-      "Harry was very easy to work with. She was always responsive to my feedback and she was always willing to make changes to the content until I was satisfied",
+      "Jane was very easy to work with. She was always responsive to my feedback and she was always willing to make changes to the content until I was satisfied",
   },
 ];
 
