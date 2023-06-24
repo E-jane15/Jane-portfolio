@@ -38,11 +38,11 @@ const [email, setEmail] = useState('')
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_zw79eef",
-      "template_v2zk59f",
+      "service_c49329o",
+      "template_4q4f3hy",
       form.current,
-      "s9LVVssyQ-S_QYygN"
-    );
+      "5kq095Jse_thpbBnp"
+    )
 
     e.target.reset();
   };
