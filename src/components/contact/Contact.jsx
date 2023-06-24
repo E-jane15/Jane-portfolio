@@ -1,5 +1,6 @@
-import React from "react";
+import {React, useState} from "react";
 import "./contact.css";
+import axios from "axios"
 import { TfiEmail } from "react-icons/tfi";
 import { BsInstagram } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -8,6 +9,30 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+
+const [msg, setMsg] = useState('')
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+
+ const submit= async(e)=>{
+  e.preventDefault()
+  setMsg('');
+  setName('');
+  setEmail('');
+
+  try {
+
+      await axios.post("http://localhost:4000/", {
+        name,
+        email,
+        msg
+      })
+
+  }
+  catch(e) {
+    console.log(e)
+  }
+}
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -63,14 +88,16 @@ const Contact = () => {
             name="name"
             placeholder="Your Full Name"
             required
+            value={name} onChange={(e) => { setName(e.target.value) }}
           />
-          <input type="text" name="email" placeholder="Your Email" required />
+          <input type="text" name="email" placeholder="Your Email" required value={email} onChange={(e) => { setEmail(e.target.value) }} />
           <textarea
             name="message"
             rows="7"
             placeholder="Your Message"
+            value={msg} onChange={(e) => { setMsg(e.target.value) }}
           ></textarea>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" onClick={submit}>
             Send Message
           </button>
         </form>
