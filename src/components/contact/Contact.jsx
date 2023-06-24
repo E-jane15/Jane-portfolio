@@ -51,7 +51,7 @@ const Contact = () => {
             <IoLogoWhatsapp className="contact__option-icon" />
             <h4>WhatsApp</h4>
             <h5>+237 682 735 859</h5>
-            <a href="https://wa.me/message/CK6QHV5DUBM3H1" target="_blank">
+            <a href="https://wa.link/u5enwv" target="_blank">
               Send a message
             </a>
           </article>
